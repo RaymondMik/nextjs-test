@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import useSWR from 'swr'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -6,6 +5,8 @@ import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { AppProps } from 'next/app'
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData()
@@ -45,7 +46,6 @@ export async function getStaticProps() {
 // }
 
 export default function Home ({ allPostsData }) {
-  const [name, setName] = useState("Ramon")
   // const { data, error } = useSWR('https://rn-locations-default-rtdb.europe-west1.firebasedatabase.app/locations.json', fetch)
 
   // if (error) return <div>failed to load</div>
