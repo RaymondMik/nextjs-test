@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react"
 import useSWR from 'swr'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -45,7 +44,6 @@ export async function getStaticProps() {
 // }
 
 export default function Home ({ allPostsData }) {
-  const [name, setName] = useState("Ramon")
   // const { data, error } = useSWR('https://rn-locations-default-rtdb.europe-west1.firebasedatabase.app/locations.json', fetch)
 
   // if (error) return <div>failed to load</div>
