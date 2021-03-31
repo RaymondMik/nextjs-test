@@ -5,6 +5,8 @@ import Date from '../components/date'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { AppProps } from 'next/app'
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData()
