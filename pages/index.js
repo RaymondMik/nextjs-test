@@ -56,9 +56,8 @@ export default function Home ({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <button onClick={() => { setName("Billo")}}>change name</button>
       <section className={utilStyles.headingMd}>
-        <p>{name}</p>
+        <p>Hello World</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
